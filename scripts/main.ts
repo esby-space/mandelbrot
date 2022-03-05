@@ -21,6 +21,7 @@ const width = canvas.width;
 const height = canvas.height;
 
 const main = () => {
+    const start = performance.now();
     const image = context.createImageData(width, height);
 
     for (let i = 0; i < width; i++) {
@@ -41,10 +42,13 @@ const main = () => {
 
     context.imageSmoothingEnabled = false;
     context.putImageData(image, 0, 0);
+
+    const end = performance.now();
+    console.log(`Time to render: ${end - start} ms`);
 };
 
 const mandlebrot = (c: Complex, z: Complex, count = 0): number => {
-    z = z.power(2).add(c);
+    z.multiply(z).add(c);
     if (z.magnitude > 2) return count;
     if (count > 255) return 0;
     return mandlebrot(c, z, count + 1);

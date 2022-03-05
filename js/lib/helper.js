@@ -93,12 +93,16 @@ class Complex {
         return pythag(this.r, this.i);
     }
     add(complex) {
-        return new Complex(this.r + complex.r, this.i + complex.i);
+        this.r += complex.r;
+        this.i += complex.i;
+        return this;
     }
     multiply(complex) {
         const real = this.r * complex.r - this.i * complex.i;
         const imaginary = this.r * complex.i + this.i * complex.r;
-        return new Complex(real, imaginary);
+        this.r = real;
+        this.i = imaginary;
+        return this;
     }
     power(exponent) {
         let out = new Complex(1, 0);

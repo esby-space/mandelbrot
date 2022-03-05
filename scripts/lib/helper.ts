@@ -113,13 +113,17 @@ class Complex {
     }
 
     add(complex: Complex) {
-        return new Complex(this.r + complex.r, this.i + complex.i);
+        this.r += complex.r;
+        this.i += complex.i;
+        return this;
     }
 
     multiply(complex: Complex) {
         const real = this.r * complex.r - this.i * complex.i;
         const imaginary = this.r * complex.i + this.i * complex.r;
-        return new Complex(real, imaginary);
+        this.r = real;
+        this.i = imaginary;
+        return this;
     }
 
     power(exponent: number) {
