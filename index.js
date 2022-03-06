@@ -24,6 +24,9 @@ app.get('/', async (request, response) => {
     console.log('hello there!');
 });
 
-app.listen(3000, () => {
-    console.log('App is available at http://localhost:3000');
+const PORT = process.env.port || '3000';
+app.listen(PORT, () => {
+    console.log(`App is available at http://localhost:${PORT}`);
 });
+
+app.set('port', PORT);
