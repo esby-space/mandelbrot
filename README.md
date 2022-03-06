@@ -8,6 +8,7 @@
 -   uses html canvas to upload and render
 -   works best in google chrome, though firefox and safari work too
     -   on my machine, it takes about 2 - 5 seconds to load fully
+-   v3 needed sharedArrayBuffer, so i had to build a quick express server and can't show on gh pages :(
 
 ## why?
 
@@ -21,3 +22,4 @@
 | ------- | ------ | ------- |
 | 1       | 1,363  | 3,292   |
 | 2       | 733    | 992     |
+| 3       | 287    | 233     |

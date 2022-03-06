@@ -1,0 +1,25 @@
+{
+  "name": "mandelbrot",
+  "version": "1.0.0",
+  "description": "my implementation of the mandelbrot set :D",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esby-space/mandelbrot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/esby-space/mandelbrot/issues"
+  },
+  "homepage": "https://github.com/esby-space/mandelbrot#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}

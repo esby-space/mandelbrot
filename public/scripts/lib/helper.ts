@@ -1,23 +1,3 @@
-// MOUSE //
-const Mouse = {
-    x: 0,
-    y: 0,
-    pressed: false,
-};
-
-document.body.onmousemove = (event) => {
-    Mouse.x = event.pageX;
-    Mouse.y = event.pageY;
-};
-
-document.body.onmousedown = () => {
-    Mouse.pressed = true;
-};
-
-document.body.onmouseup = () => {
-    Mouse.pressed = false;
-};
-
 // MATH //
 const random = (min: number, max: number) => {
     return Math.floor(Math.random() * (max - min)) + min;
@@ -181,6 +161,20 @@ const paintPixel = (image: ImageData, x: number, y: number, rgba: RGBA) => {
     image.data[i + 1] = rgba.g; // green
     image.data[i + 2] = rgba.b; // blue
     image.data[i + 3] = rgba.a; // alpha
+};
+
+const paintPixelData = (
+    data: Uint8ClampedArray,
+    width: number,
+    x: number,
+    y: number,
+    rgba: RGBA
+) => {
+    const i = 4 * (y * width + x);
+    data[i] = rgba.r; // red
+    data[i + 1] = rgba.g; // green
+    data[i + 2] = rgba.b; // blue
+    data[i + 3] = rgba.a; // alpha
 };
 
 const toRGBA = (h: number, s: number, l: number, a = 1): RGBA => {
