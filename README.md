@@ -1,14 +1,15 @@
-# mandelbrot!
+# [mandelbrot!](https://esby-mandelbrot.herokuapp.com/)
 
-![mandelbrot!](/public/images/mandelbrot.pngimages/mandelbrot.png)
+![mandelbrot!](/public/images/mandelbrot.png)
 
-## this is my attempt to implement the mandelbrot set using html canvas, it is _really_ inefficient!
+## this is my attempt to implement the mandelbrot on the web!
+**it is *really* inefficient!**
 
 -   written in typescript, under `scripts/main.ts`
 -   uses html canvas to upload and render
 -   works best in google chrome, though firefox and safari work too
     -   on my machine, it takes about 2 - 5 seconds to load fully
--   v3 needed sharedArrayBuffer, so i had to build a quick express server and can't show on gh pages :(
+-   v3 needed sharedArrayBuffer, so i had to build a quick express server, which is great bc i don't know express :(
 
 ## why?
 
