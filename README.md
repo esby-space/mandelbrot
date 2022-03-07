@@ -1,6 +1,6 @@
 # mandelbrot!
 
-![mandelbrot!](images/mandelbrot.png)
+![mandelbrot!](/public/images/mandelbrot.pngimages/mandelbrot.png)
 
 ## this is my attempt to implement the mandelbrot set using html canvas, it is _really_ inefficient!
 

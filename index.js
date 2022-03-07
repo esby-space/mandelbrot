@@ -11,22 +11,8 @@ app.use(
     })
 );
 
-app.get('/', async (request, response) => {
-    const home = await readFile('./public/index.html', 'utf-8').catch(
-        (error) => {
-            response.send(error);
-            response.status(400);
-        }
-    );
-
-    response.send(home);
-    response.status(200);
-    console.log('hello there!');
-});
-
-const PORT = process.env.port || '3000';
+const PORT = process.env.PORT || 3000;
+app.set('port', PORT);
 app.listen(PORT, () => {
     console.log(`App is available at http://localhost:${PORT}`);
 });
-
-app.set('port', PORT);
