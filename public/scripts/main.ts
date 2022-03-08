@@ -45,16 +45,23 @@ const main = async () => {
     };
 
     document.body.onkeydown = (event) => {
-        if (event.key == '-') {
-            view.r.start *= 2;
-            view.r.end *= 2;
-            view.i.start *= 2;
-            view.i.end *= 2;
-        } else if (event.key == '=') {
-            view.r.start /= 2;
-            view.r.end /= 2;
-            view.i.start /= 2;
-            view.i.end /= 2;
+        const zoomX = (view.r.end - view.r.start) / 4;
+        const zoomY = (view.i.end - view.i.start) / 4;
+        if (event.key == '=') {
+            view.r.start += zoomX;
+            view.r.end -= zoomX;
+            view.i.start += zoomY;
+            view.i.end -= zoomY;
+        } else if (event.key == '-') {
+            view.r.start -= zoomX;
+            view.r.end += zoomX;
+            view.i.start -= zoomY;
+            view.i.end += zoomY;
+        } else if (event.key == '0') {
+            view.r.start = -2;
+            view.r.end = 2;
+            view.i.start = -2;
+            view.i.end = 2;
         }
 
         render(view, color);
