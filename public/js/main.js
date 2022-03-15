@@ -95,3 +95,7 @@ const render = async (view, color) => {
     }
 };
 window.addEventListener('load', main);
+// /\__/\
+// (=o.o=)
+// |/--\|
+// (")-(")

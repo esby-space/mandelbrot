@@ -116,3 +116,8 @@ const render = async (
 };
 
 window.addEventListener('load', main);
+
+// /\__/\
+// (=o.o=)
+// |/--\|
+// (")-(")

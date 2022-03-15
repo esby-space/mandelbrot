@@ -9,7 +9,7 @@ onmessage = (message) => {
             const complex = new Complex(real, imaginary);
 
             const count = mandlebrot(complex, new Complex(0, 0));
-            paintPixelData(
+            paintPixel(
                 data,
                 width,
                 i,
@@ -26,10 +26,15 @@ onmessage = (message) => {
 const mandlebrot = (c: Complex, z: Complex): number => {
     let count = 0;
     while (z.magnitude < 2 && count < 255) {
-        z.multiply(z).add(c);
+        z.square().add(c);
         count++;
     }
 
     if (count == 255) return 0;
     return count - 1;
 };
+
+// /\__/\
+// (=o.o=)
+// |/--\|
+// (")-(")
